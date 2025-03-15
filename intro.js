@@ -86,4 +86,26 @@ fight={
 }
 console.log(fight)
 //reference changed inlike above const case
+//------------------------------------------------
+//exponential operator
+let num1 = 3
+let num2 = 2
+console.log(3**2)
+    //returs krega 3 power 2
+//------------------------------------
+//for in looop
+let jasoos={
+    name:"jagga",
+    teft:"$2B",
+    caught:"not yet"
+}
+for(const key in jasoos){
+    console.log(key)
+}
+
+for(const key in jasoos){
+    const element = jasoos[key]
+    console.log(element)
+}
+
 

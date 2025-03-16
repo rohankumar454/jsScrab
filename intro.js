@@ -130,4 +130,47 @@ let sankhya = Math.random();
 console.log(sankhya)
 //------------------------------------------
 
+//arrays
+let arr = [1, 2, 3]
+
+//NOTE TAHAT::
+console.log(typeof(arr)) //it will be 'object'
+//NOTE TAHAT:: 
+
+console.log(arr.length)
+arr[0] = "rohan"
+console.log(arr)
+console.log(arr.length)
+//array is mutable but not string
+
+//string immutability test
+let str = "bharat"
+for (const key in str) {
+      console.log(str[key])
+      }
+
+str[0] = "m" //koi change nhi dikhaa
+for (const key in str) {
+      console.log(str[key])
+      }
+      //output - bharat
+//converting arr to string
+arr.toString()
+console.log(typeof(arr))
+/*
+NOTE::: it will not chage type still there
+will be output of 'object'
+BECAUSE--> tostring() array ka string wala
+version return krega na ki aray ko permanently
+change krega
+*/
+console.log(typeof(arr.toString()))
+//it will return 'string'
+//or isko variable me store kra skte hai
+console.log(typeof(arr)) //still object originally
+
+//--------------------------------------------------
+
+
+
 

@@ -168,8 +168,67 @@ console.log(typeof(arr.toString()))
 //it will return 'string'
 //or isko variable me store kra skte hai
 console.log(typeof(arr)) //still object originally
-
 //--------------------------------------------------
+
+//joining in array
+let air = [1,2,3,5,4]
+console.log(air)
+console.log(air.join("x"))// o/p - 1x2x3x5x4
+console.log(typeof(air)) //still object
+//push and pop opetation
+air.pop()
+console.log(air)
+air.push(20)
+console.log(air)
+//concatination
+let a = "Hello! "
+let b = "How "
+let c = "are you?"
+console.log(a.concat(b,c))
+//-----------------------------------------------------
+//map
+let exampleArr = [1,2,3,4,5,6,7]
+
+let add = exampleArr.map(element =>{
+      return element += 100
+})
+console.log(add)
+
+//it can be written in this way also
+let squaredArr = exampleArr.map(element =>{
+      return element**2
+})
+console.log (squaredArr)
+console.log(exampleArr)//still unchanged
+//because .map() returns modified and do
+//not changes original array
+//-------------------------------------------------------
+//FILTER
+let xx = [1,2,8,6,9,3,5,7,15,2,8]
+      //i want a array of elements greater than 5
+
+let xxNew = xx.filter((element)=>element>5)
+console.log(xxNew)
+/*
+.filter yaha par xx ke har element ko iterate karega or
+agar element> 5 hai to usko absorb kar ke xxNew me store
+kar lega
+*/
+//-----------------------------------------------------------
+//REDUCE
+let nayaArray = [10,20,30,40,50]
+
+let summation = nayaArray.reduce((acc, crnt)=>acc+crnt,1000)
+console.log(summation)
+/*
+reduce method accumulator and curent(iterating element) ko
+consider karna hai or last me accumulator ka initial value
+ko define karna hota hai....
+--->yaha par .reduce ko kha gya hai ki tum create karo 
+accumulator with initial value 1000 and accumulator me
+current value ko add karte rho shristi ke aaannt takkkk.
+*/
+//-----------------------------------------------------------
 
 
 

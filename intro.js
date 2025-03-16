@@ -107,5 +107,27 @@ for(const key in jasoos){
     const element = jasoos[key]
     console.log(element)
 }
+//------------------------------------
+//use of back-tick(`` ->tabKeUprWalaBtn😂)
+let fistName = "rohan"
+let lastName = "xoni"
+let fullName = `your full name is ${fistName} ${lastName}`
+console.log(fullName)
+//------------------------------------
+//string slicing
+let exampleString = "elephant"
+console.log(exampleString.slice(2,5))
+        //this will print from 2 to 4
+        //5 is not included
+//-------------------------------------
+//replacing
+console.log(exampleString.replace("e", "g"))
+      //agar 2 occurence huee to first replace hogi
+      //elephant me e 2 hai but update first-one hi hogi
+//------------------------------------------
+//use of random (faulty calculator)
+let sankhya = Math.random();
+console.log(sankhya)
+//------------------------------------------
 
 

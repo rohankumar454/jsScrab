@@ -229,6 +229,20 @@ accumulator with initial value 1000 and accumulator me
 current value ko add karte rho shristi ke aaannt takkkk.
 */
 //-----------------------------------------------------------
+//ASSIGNING ARRAY IN DIFFERENT WAY
+let x = 10;
+let inx = Array(x).keys();
+/*
+Array(x).keys() ek special object bnayega jo
+traditionl array ke tarah nhi hoga....ye bs 
+indexes throw krega up to that number!!
+*/
+let arr = Array.from(inx);
+/*ab Array.from() us object ko ek asli object 
+ke tarah present krega jo as an array use kiya 
+ja skta hai */
+console.log(arr);
+//------------------------------------------------------------
 
 
 

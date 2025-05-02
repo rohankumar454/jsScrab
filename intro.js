@@ -243,6 +243,15 @@ ke tarah present krega jo as an array use kiya
 ja skta hai */
 console.log(arr);
 //------------------------------------------------------------
+//FINDING FACTORIAL
+let numb = 5;
+function factorial(number){
+    let indexx = Array.from(Array(number+1).keys());
+    console.log(indexx.slice(1));
+    return indexx.slice(1).reduce((accumulator, current)=>accumulator*current)
+}
+console.log(factorial(numb));
+//----------------------------------------------------------------
 
 
 

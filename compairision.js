@@ -29,4 +29,9 @@ console.log(undefined >= 0)//false
 console.log(undefined <= 0)//false
 //it is false in all the cases!!!
 //-------------------------------------------------------
+//STRICT CHECK
+console.log("2" == 2)//true
+console.log("2"===2)//true
+//this is strict check
+//strict check checks the data type also
 

@@ -20,4 +20,13 @@ NOTE:: this is because equality check '==' and compairisions
 both works differently. Comparision check preceives null
 as number 0(zero) but compairision checks take null differently
 */
+//-------------------------------------------------------------
+//COMPAIRING 'undefined' ::
+console.log(undefined == 0)//false
+console.log(undefined > 0)//false
+console.log(undefined < 0)//false
+console.log(undefined >= 0)//false
+console.log(undefined <= 0)//false
+//it is false in all the cases!!!
+//-------------------------------------------------------
 

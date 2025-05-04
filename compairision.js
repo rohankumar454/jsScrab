@@ -31,7 +31,7 @@ console.log(undefined <= 0)//false
 //-------------------------------------------------------
 //STRICT CHECK
 console.log("2" == 2)//true
-console.log("2"===2)//true
+console.log("2"===2)//false
 //this is strict check
 //strict check checks the data type also
 

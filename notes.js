@@ -462,7 +462,45 @@ HEAP MEMORY ME JATE HAI...
 STACK - COPY STORE HOTE HAI KR BAAR
 HEAP - REFERENCE SHARE HOTE HAI HAR BAAAR
 */
-//---------------------------------------------------------------
+//------------------------------------------------------------------
+
+// //*************STRINGS********************
+let name = "hitesh"
+console.log(typeof name)//string
+
+let newName = new String('hitesh')
+console.log(typeof newName)//object
+//string v ek object hai!!
+//-------------------------------------------
+let str = "helloIndia"
+console.log(str.charAt(5))
+console.log(str.indexOf('l'))//shows first occured
+//---------------------------------------------
+
+
+
+
+//************METHODS IN STRING***************
+//slice(), substring()
+let hero = "sahrukhKhan"
+console.log(hero.substring(0, 5))//sahru
+console.log(hero.slice(0, 5))//sahru
+
+
+//trim()
+let animal = "  kutta    "
+console.log(animal.trim())
+
+
+const url = "https//rohan.com/home%2022"
+console.log(url.replace('%', '-'))
+//https//rohan.com/home-2022
+
+.includes()
+let para = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+console.log(para)
+console.log(para.includes('electronic'))//true
+console.log(para.includes('rohan'))//false
 
 
 

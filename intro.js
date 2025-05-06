@@ -252,7 +252,217 @@ function factorial(number){
 }
 console.log(factorial(numb));
 //----------------------------------------------------------------
+//****************DATATYPES CONVERSION*****************
+console.log(Boolean("rohan")) //true
+console.log(Boolean(""))//false
+console.log(Boolean("%"))//true
+console.log(Boolean(1))//true
+console.log(Boolean(0))//false
+/*
+If there is something in the boolean
+may be string and may be any number
+if not 0(zero) then it's output will be 'true'.
 
+Anything accept number without the quotation
+mark will throw an error!!!!!!!!!
+*/
+
+//-------------------------------------------------
+
+let someNumber = 4587
+console.log(typeof someNumber)//number
+
+let converted = String(someNumber)
+console.log(typeof converted)//string
+
+//-----------------------------------------------
+let x = "hello"
+let xnew = Number(x)
+console.log(xnew)
+//x in updated form is not a number
+//so the output is NaN
+let y = "58"
+let ynew = Number(y)
+console.log(ynew)//output:58
+
+let t = "48KLIkjh"
+let tnew = Number(t)
+console.log(tnew)//NaN
+//-------------------------------------------------
+
+
+//************OPERATIONS********************
+let value = 8;
+let newValue = -value;
+console.log(newValue)
+//-----------------------------------------
+let str = "rohan"
+let str2 = " xoni"
+let str3 = str+str2
+console.log(str3)
+//-----------------------------------------
+//AN INTRESTING THING
+console.log(2+2)//4
+console.log("2"+2)//22
+console.log(2+2+"2")//42
+console.log(10+20+"30"+12)//303012
+console.log(5+2+"hello"+1+3)//7hello13
+//means jais hi ek barr stirng aa gya
+//uske baad sara ka sara as a string hi
+//liya jayeggaaa
+//----------------------------------------------
+//INCREMENT
+let count = 100
+count++
+console.log(count)//101
+
+let count2 = 200;
+++count2
+console.log(count2)//201
+
+let count3 = 500
+console.log(count3++)//500
+//here first count3 will be used and
+//then there will be increment in it
+
+let count4 = 400
+console.log(++count4)//401
+//pahle yaha pr incement hoga fir aage use hoga
+//unlike uprwala jaha pahle use ho raha tha fir use hua
+//--------------------------------------------------------
+
+//*********************COMPAIRISION************************
+console.log("20" > 10)//true
+console.log("apple" > 10)//false
+console.log("k" > "a")//true
+console.log("100" < "200")//true
+console.log("02"  > 1)//true - yaha par aage 0 lgase
+                      //koi frk nahi padta hai
+//js automatically converts string into the int
+//according to the compairision and gives the error free
+//result but this is very bad practice
+//--------------------------------------------------------
+//fucked up situation while compairing null
+console.log(null > 0)//false
+console.log(null < 0)//false
+console.log(null == 0)//false
+console.log(null >= 0)//ture
+console.log(null <= 0)//true
+/*
+NOTE:: this is because equality check '==' and compairisions
+both works differently. Comparision check preceives null
+as number 0(zero) but compairision checks take null differently
+*/
+//-------------------------------------------------------------
+//COMPAIRING 'undefined' ::
+console.log(undefined == 0)//false
+console.log(undefined > 0)//false
+console.log(undefined < 0)//false
+console.log(undefined >= 0)//false
+console.log(undefined <= 0)//false
+//it is false in all the cases!!!
+//-------------------------------------------------------
+//STRICT CHECK
+console.log("2" == 2)//true
+console.log("2"===2)//false
+//this is strict check
+//strict check checks the data type also
+
+
+
+/* ***************MORE ON DATATYPES**********************
+
+data types ko kis tarah memory me rakha jata hai or
+access kiya jata hai uske aadhaar par 2 type ke dataTypes
+hote hai 1.Primitive 2.Non-Primitive
+(also called 'reference types') 
+*/
+//PRIMITIVE DATATYPES::
+// [7 hai total]
+String, Number, Boolean, BigInt, Symbol, null, undefined
+
+//--------------------------------------------------------------------
+//an intresting use of symbol...ha!ha!ha
+let alpha = Symbol('123')
+let beta = Symbol('123')
+console.log(alpha == beta)//ye false dega
+//we will see more about it during react anAll......
+//--------------------------------------------------------------------
+
+//NON-PRIMITIVE(reference types bhi kahte hai isko)
+Object, Function, Array
+
+//---------------------------------------------------------------------
+
+//Note:: js is 'dynamically typed' language, because there
+//not requirement for determining the type of variable in
+//compile time it is automatically determined in run time and 
+//'it can also be changed' unlike java, c++ etc.
+let x = 50
+x = "roanXoni"
+console.log(x)//there is no error
+
+//----------------------------------------------------------------------
+//way to define object--
+// WAY 1
+let person =  new Object();
+person.name = "rohan"
+person.age = 20
+person.address = "muzaffarpur"
+console.log(person)
+// WAY 2
+let superHero = {
+    name:"Robet Downy Junior",
+    knownAs:"Iron Man",
+    also:"Avengers"
+}
+console.log(superHero)
+//---------------------------------------------------------------------
+console.log(typeof(null));      // "object"
+console.log(typeof(Object));    // "function"
+console.log(typeof(Function));  // "function"
+console.log(typeof(String));    // "function"
+console.log(typeof(Boolean))    //"function"
+
+//-------------------------------------------------------------
+
+//*********HOW MEMORIRES ARE USED IN DATATYPES****************
+let name = "rohan"
+let nameCopy = name
+name = "xoni"
+console.log(name)//xoni
+console.log(nameCopy)//rohan
+//Yaha par ye nameCopy me koi change nahi 
+//dikh rha hai because there is copy of previous name
+//or agar name me baaad me koi change hota hai to
+//nameCopy me reflect nahi karega
+
+//------------------------------------------------------
+let userOne = {
+    email: "xxx@gmail.com",
+    address: "Muzaffarpur Bihar"
+}
+let userTwo = userOne
+userOne.address = "Dharbhanga"
+
+console.log(userOne)
+//{ email: 'xxx@gmail.com', address: 'Dharbhanga' }
+console.log(userTwo)
+//{ email: 'xxx@gmail.com', address: 'Dharbhanga' }
+
+//yaha pr reference share ho raha hai agr upr change 
+//huaa to yha bhi change hoga.........
+//----------------------------------------------------------------
+//NOTE:::
+/*
+JITNE BHI primitive datatypes hote hai wo sb STACK MEMORY ME 
+STORE HOTA HAI OR JITNE BHI NON PRIMITIVE DATA TYPES HOTE HAI WO 
+HEAP MEMORY ME JATE HAI...
+
+STACK - COPY STORE HOTE HAI KR BAAR
+HEAP - REFERENCE SHARE HOTE HAI HAR BAAAR
+*/
+//---------------------------------------------------------------
 
 
 

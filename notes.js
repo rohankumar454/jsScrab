@@ -504,3 +504,90 @@ console.log(para.includes('rohan'))//false
 
 
 
+
+
+
+//at()
+let name = 'rohanKumar'
+console.log(name.at(3))
+console.log(name.at(-3))//-ve counting start form 1 from last
+
+
+//startWith()-boolean
+console.log(name.startsWith('ro'))//true
+let message = 'tu to gya bete'
+console.log(message.startsWith('bete', 10))//true
+
+//endsWith()
+let information = "process has initiated"
+console.log(information.endsWith('has', 11))
+    //here 11 works like-information.slice(0,11)
+
+//indexOf()
+console.log(information.indexOf('has'))
+let raz = 'don is don is'
+console.log(raz.indexOf('is'))
+    //works on first given substring
+
+//lastIndexOf()
+console.log(raz.lastIndexOf('is'))
+let raz2 = 'indian police and beaurocrats are over corrupt, and indian politics are sameful'
+console.log(raz2.lastIndexOf('indian'))
+console.log(raz2.lastIndexOf('are'))
+
+//search()
+let diyaGya = 'the moon and spoon glows like silver'
+console.log(diyaGya.search('moon'))
+
+//slice() with negarive index
+let data = "hello this is rohan going to learn web develpment"
+console.log(data.slice(2, -5))
+    //llo this is rohan going to learn web devel
+
+//substr() and substring()
+console.log(data.substr(3, 10))
+    //means start form index 3 and capture 10 more chars.
+console.log(data.substring(1, 10))
+    //same like slice
+console.log(data.slice(1,10))
+
+//charCodeAt() and charPointAt()
+let emoji = '🔥'
+console.log(emoji.charCodeAt(0))
+console.log(emoji.codePointAt(0))
+    //unique code show karta hai each character ke liye
+
+//replaceAll()
+let story = 'Jangal me ek ser rha karta tha or ser bhut harami tha ek din ki bat hai ser so rha tha'
+console.log(story)
+console.log(story.replaceAll('ser', 'kutta'))
+
+//trim(), trimStart(), tirmEnd()
+let para001 = '     this whole world is ruined by humans    '
+console.log(para001)
+console.log(para001.trim())
+console.log(para001.trimStart())
+console.log(para001.trimEnd())
+
+//padStart(), padEnd()
+let example = '2673'
+console.log(example.padStart(10, "*"))
+console.log(example.padEnd("10", '#'))
+
+//repeat(n)
+let testString = "apple,banana,mango,tomato"
+console.log(testString.repeat(3))
+
+//split() - ⭐
+console.log(testString.split("."))
+console.log(example.split(""))
+let pani = 't-h-a-n-d-a'
+console.log(pani.split("-"))
+let chai = 'g#a#r#a#m'
+console.log(chai.split("#"))
+let nameDatabase = "sureshkumarrameshkumarrakeshkumarrajeshkumar"
+console.log(nameDatabase.split("kumar"))
+
+
+
+

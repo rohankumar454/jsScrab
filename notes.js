@@ -591,3 +591,85 @@ console.log(nameDatabase.split("kumar"))
 
 
 
+
+let name = 'billa'
+// console.log(name.substring(0,3))
+console.log(name.slice(-4,-1))
+    //very imp -> if start > end ---> returns empty string
+
+
+//----------NUMBERS AND MATHS----------------//
+const score = 400
+console.log(score)//400
+
+const balance = new Number (400)
+console.log(balance)//[Number: 400]
+    //some usecases
+console.log(balance.toString().length)
+console.log(balance.toFixed(2))//400.00
+
+//toFixed()
+let value = 50.148564
+console.log(value.toFixed(2))
+    //😢ye round figure me value deta hai 
+    //output-50.15
+    //— Number of digits after the decimal point. Must be in the range 0 - 20, inclusive.
+
+//toPrecision() - ⭐⭐⭐
+const newNum = 23.54
+console.log(newNum.toPrecision(3))//23.5
+const newNum2 = 123.54
+console.log(newNum2.toPrecision(3))//124 
+    //mamla roundoff ho gya automatic
+const num4 = 154.15
+console.log(num4.toPrecision(2))//1.5e+2 ---- (1.5 x 10^2)
+
+//toLocalString() and toLocalString('en-')
+const dalali = 1000000
+console.log(dalali.toLocaleString())//10,00,000
+console.log(dalali.toLocaleString('en-US'))//1,000,000
+    //it may be indian or us by default but can be changed 
+
+//Math.abs() - absolute value
+const sankhya = -40
+console.log(Math.abs(sankhya))//40
+
+//Math.round()
+console.log(Math.round(42.36))//42
+
+//Math.ceil() and Math.floor()
+const testNum = 7.8
+console.log(Math.ceil(testNum))// 8 (upperCap deta hai)
+console.log(Math.floor(testNum))// 7 (lowerCap deta hai)
+
+//Math.random() ⭐⭐⭐🔥🔥🔥
+console.log(Math.random())
+console.log(Math.floor(0.29))
+console.log(Math.floor(Math.random()*10)+1)
+    //question: 40 se 70 ke bich ka rnadom generation
+    //solution::
+        const min = 40
+        const max = 70
+        console.log(Math.floor(Math.random()*(max-min+1)+min))
+
+
+//---------------DATES-----------------------//
+let myDate = new Date()
+console.log(myDate)//2025-06-29T08:18:57.764Z
+console.log(myDate.toString())//Sun Jun 29 2025 13:48:57 GMT+0530 (India Standard Time)
+console.log(Date())//Sun Jun 29 2025 13:48:57 GMT+0530 (India Standard Time)
+
+console.log(myDate.toISOString()) //2025-06-29T16:23:13.795Z
+console.log(myDate.toJSON()) //2025-06-29T16:23:13.795Z
+console.log(myDate.toLocaleDateString('en-US')) //6/29/2025
+console.log(myDate.toLocaleDateString()) //29/6/2025
+console.log(myDate.toLocaleString //  29/6/2025, 9:53:13 pm
+
+console.log(typeof(myDate))//object
+
+//-----------------------ARRAYS----------------//
+
+
+
+
+

@@ -667,8 +667,58 @@ console.log(myDate.toLocaleString //  29/6/2025, 9:53:13 pm
 
 console.log(typeof(myDate))//object
 
-//-----------------------ARRAYS----------------//
 
+
+
+
+
+
+
+//-------------------------arrays--------------//
+
+let myArr = [1,2,3,4,5,6,8,7]
+let myArr2 = new Array(1,2,3,5,4,6,8)
+console.log(myArr)
+console.log(myArr2)
+
+let test = [200,100,420]
+test.push(500)
+console.log(test)
+test.pop()
+console.log(test)
+
+//unshift()
+test.unshift(2025)
+console.log(test)//[ 2025, 200, 100, 420 ]
+    /*
+    -->adds at first place
+    -->but - this operation will change all the 
+    memory allocation of the elements of the array and
+    increases unnecessary loads on the computer
+    */
+
+//shift()
+console.log(test) //[ 2025, 200, 100, 420 ]
+test.shift()
+console.log(test)//[ 200, 100, 420 ]
+    //removes from first place
+
+//join()
+let ar = [100,200,300,400]
+console.log(ar)//[100,200,300,400]
+let ar2 = ar.join()
+console.log(ar2) // 100,200,300,400
+    //join() made it a string and presented it
+
+//slice() and splice() ⭐⭐⭐
+let originalArr = [1,2,3,4,5,6]
+console.log(originalArr.slice(1,3)) // [2,3]
+console.log(originalArr) //[ 1, 2, 3, 4, 5, 6 ]
+
+let originalArr2 = [10,20,30,40,50,60]
+console.log(originalArr2.splice(1,3)) //[ 20, 30, 40 ]
+console.log(originalArr2) //[ 10, 50, 60 ]
+    //game is here obserb carefully
 
 
 

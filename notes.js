@@ -722,4 +722,48 @@ console.log(originalArr2) //[ 10, 50, 60 ]
 
 
 
+//---------arrays part2-----------//
+
+const arr1 = ['soni', 'moni', 'toni']
+const arr2 = ['rani', 'vani', 'pani']
+arr1.push(arr2)
+console.log(arr1)
+    //[ 'soni', 'moni', 'toni', [ 'rani', 'vani', 'pani' ] ]
+const arr3 = arr1.concat(arr2)
+console.log(arr3)
+    //[ 'soni', 'moni', 'toni', 'rani', 'vani', 'pani' ]
+    //returns totally new array 
+
+//spread operator (...)
+let alpha = ['apple', 'lichi', 'mango', 'lemon']
+let beta = ['tiger', 'elephant', 'lion', 'kutta']
+let gama = [...alpha, ...beta]
+console.log(gama)
+
+//flat()
+let newArr = [1,2,3,[4,5,6],7,[8,9,[10,11]]]
+    //question is __ I want a plane array i.e all data in one plane:
+    //sol::
+    let cleanArray = newArr.flat(Infinity)//flat(depth)
+    console.log(cleanArray)
+
+//check for array
+console.log(Array.isArray("rohan"))
+
+//converting to an array
+console.log(Array.from("rohanXoni"))
+
+//use of .form() in objects ⭐⭐⭐
+console.log(Array.from({name:'rohan', age:20, rank:'last'}))
+    //it will give an empty array -> []
+
+//.of()
+let score1 = 100
+let score2 = 200
+let score = 300
+console.log(Array.of(score1, score2, score))
+    //[ 100, 200, 300 ]
+
+
+
 

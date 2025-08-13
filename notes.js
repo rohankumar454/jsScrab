@@ -821,7 +821,44 @@ console.log(kalaUser.dataExtract())//Mera nam Kala Khatta hai, mai Zeromile ka r
 
 
 //------------------------OBJECTS PART 2----------------------------
+//spread operators work here
+//example::--
+let one = {1:"one", 2:"two"}
+let two = {2:"two", 3:"three"}
+let three = {...one,...two}
+console.log(three)//{ '1': 'one', '2': 'two', '3': 'three' }
+//keys can not be same it should be unique other wise it will be over written
 
+
+//use of 'assign' for combining objects
+let four = Object.assign({}, one, two)
+console.log(four)
+
+//how data are used in database
+let testUser = [
+    {
+        id:1001,
+        name:"kutta",
+        fried:"billa"
+    },
+
+     {
+        id:1002,
+        name:"rabbit",
+        fried:"bilauti"
+    },
+
+     {
+        id:1003,
+        name:"dogesh",
+        fried:"bagarBilla",
+        add:"zeromile"
+    }
+]
+
+console.log(testUser[2].add)
+console.log(Object.keys(testUser[0]))
+console.log(Object.values(testUser[0]))
 
 
 

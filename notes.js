@@ -767,3 +767,62 @@ console.log(Array.of(score1, score2, score))
 
 
 
+
+//---------------------OBJECTS-------------------------------------
+let user = {
+    name: "Babloo Blast",
+    add: "Ahiyapur, Muzaffarpur"
+}
+//there are two ways to access it::
+//first way
+console.log(user.name)
+//second way (this is considered as good one)
+console.log(user['name'])
+console.log(user['add'])
+
+//an intresting case regards second method to access::
+let user2 = {
+    name: "Jogindar",
+    "full name": "jogindar Jahrila"
+}
+//-->how you will access "full name"
+console.log(user2["full name"])
+//this is only way to access it, dot operator
+//would not work here...!
+
+//function in object
+let kalaUser = {
+    name: "Kala Khatta",
+    add: "Zeromile",
+}
+kalaUser.greetings = function () {
+    console.log("Hello! mera nam Kala Khatta hai.")
+}
+//use of keys of objects in the function of object itself
+kalaUser.dataExtract = function () {
+    console.log(`Mera nam ${kalaUser.name} hai, mai ${kalaUser.add} ka rahne wala hu`)
+}
+
+//----------------------------------------
+console.log(kalaUser)
+/* 
+OUTPUT::
+{
+  name: 'Kala Khatta',
+  add: 'Zeromile',
+  greetings: [Function (anonymous)],
+  dataExtract: [Function (anonymous)]
+}
+*/
+//----------------------------------------
+
+console.log(kalaUser.greetings()) //Hello! mera nam Kala Khatta hai.
+console.log(kalaUser.dataExtract())//Mera nam Kala Khatta hai, mai Zeromile ka rahne wala hu
+
+
+//------------------------OBJECTS PART 2----------------------------
+
+
+
+
+

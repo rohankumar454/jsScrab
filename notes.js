@@ -863,3 +863,26 @@ console.log(Object.values(testUser[0]))
 
 
 
+//-------OBJECT DESTRUCTURING-----
+let courseNew = {
+    name:"javaScript hero",
+    price: 5499,
+    courseInstructor: "Jageshar"
+}
+
+//how to access courseindstructor
+console.log(courseNew.courseInstructor)
+//bar bar lamba likhna padta hai
+
+
+//how to destructure this to avoid allot of writing
+const {courseInstructor} = courseNew
+console.log(courseInstructor) // jageshar
+
+//also
+const {courseInstructor:master}=courseNew
+console.log(master)
+
+
+
+

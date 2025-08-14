@@ -883,6 +883,35 @@ console.log(courseInstructor) // jageshar
 const {courseInstructor:master}=courseNew
 console.log(master)
 
+//-------FUNCTION--------
+//there are two ways to define function
+
+//first::
+ram(10)
+function ram(multiple){
+    for(i=0; i<multiple; i++){
+        console.log("Jai Sri Ram")
+    }
+}
+
+//second
+let test = function(){
+    console.log("Radhe-Radhe")
+}
+test()
+
+//all work fine
+
+//BUT THE CATCH IS HERE
+//if we try to execute the second method of function
+//before defining it then it will though errorr
+//seee below::
+
+userX() // ERROR ERROR ERROR
+let userX = function(){
+    console.log("i am user x")
+}
+
 
 
 

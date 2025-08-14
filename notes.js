@@ -1031,3 +1031,41 @@ console.log(rx())
 //----------------------------------------
 
 
+
+
+
+
+/////----------------------IIFI --------------------------------- 
+// Immidiately Invocked Function Expressions
+// ------->iska use hota hai to protect the function from 
+//external global pollution
+//FORMATE::
+//          ()         ()
+//       function   expression
+
+(function missiles(){
+    console.log("FIRE TOWARDS PAKISTAN")
+})();
+//-->OR YE EXECUTE HO GYA MASTTTTT....BWAALLLL....KHATARNAK
+
+//important note --> if we want to run twice this then ';' is important
+(function findConnection(){
+    console.log("dataBaseConnected")
+})();
+
+// how arrow function works with IIFI ::-
+(()=>{
+    console.log("jai sri ram")
+})();
+
+//FACT✅
+//You do not define or specify a function name 
+//in the case of an arrow function IIFE.
+
+//a personal exeperiment
+(function(){
+    console.log("experiment_001")
+})()
+//it runs.......waoooo...😘
+
+

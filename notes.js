@@ -915,3 +915,119 @@ let userX = function(){
 
 
 
+//------------this is for my curiocity, I just searched with perplexity and got the logic---------------------------
+// ---------let and const difference------------
+//FIRST DIFFF::
+let ram = 500;
+ram = 400;
+console.log(ram)
+    //allowed
+const rahim = 700
+rahim = 800 
+console.log(rahim)
+    //not allowed
+
+//SECOND DIFFFF
+let objTest = {
+    carName:"baleno",
+    price:452879
+}
+
+objTest ={
+    carName:"curv"
+}
+/*
+new object created with same previous name and 
+previous will be treated as garbage js will 
+wipe that out
+*/
+console.log(objTest)
+
+//BUT IN const you can not reassign same object
+//e.g
+const crime={
+    discription:"chappal chori",
+    punishment:"desh nikala"
+}
+crime ={
+    discription:"kutta chori"
+}
+console.log(crime)
+    //ERROR ERROR ERROR
+
+
+
+
+//----------------USE OF .this------------------
+let hero = {
+    name:"alpha",
+    films:50,
+    add:"beta",
+    fee: function(){
+        console.log(`fee ${this.name} takes now is 500000`)
+        console.log(this)//will give the current context it can access
+    }
+}
+
+hero.fee()
+console.log(hero)
+hero.name = "sahrukh Khan"
+hero.fee()
+console.log(this)//{} -->this is empty object
+//BUT WHEN WE RUN IT IN BROWSER IT WILL GIVE windows as current 
+//context becuuse in browser the most used global object is window
+//matlab ye ki agar OBJECT ke andar koi context hai to usi ko
+//access krega.
+
+function test(){
+    console.log(this)
+}
+test()
+//alots of vlue from 'node environment'
+
+// BUT--->>this can not be use whith dot operator in fucnton but in object
+// it will run fine
+function test(){
+    let userName = "Hitler"
+    console.log(this.userName)
+}
+test()//undefined
+
+
+
+
+
+////---------------ARROW FUNCTION-----------------
+let bihar = () =>{
+    console.log("corruption")
+}
+bihar()
+
+let addition = (num1, num2) =>{
+    return num1+num2
+}
+console.log(addition(50,20))
+
+//implicit return in arrow function
+let multiplication = (first, second) => first*second
+    //there is no need to write return it works directly
+console.log(multiplication(12,12))
+
+
+//returning an object in function
+function check(){
+    let obj = {
+        name:"rohan xoni"
+    }
+    return obj
+}
+console.log(check())
+
+//----------------------------------------
+let rx = () => ({mobile:9976585522})
+console.log(rx())
+///kripyaa dhyaa deee....yha paranthesiss() lagana jroori hai
+//nahi to nahi chalegaa
+//----------------------------------------
+
+

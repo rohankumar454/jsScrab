@@ -1069,3 +1069,240 @@ console.log(rx())
 //it runs.......waoooo...😘
 
 
+
+
+
+
+
+
+// -------------control flow----------
+//shorthand notation
+let balance = 500
+if(balance > 300) console.log("it's Ok"), console.log("You can buy");
+//but don't use this it is bad practice!!❌
+
+
+//swith
+let num = 2
+switch(num){
+    case 1:
+        console.log("one")
+        break;
+    
+    case 2:
+        console.log("two")
+        break;
+
+    case 3:
+        console.log("three")
+        break;
+    default:
+        console.log("Invailid")
+}
+
+
+//if-else-special case
+let userName = "rohan@xoni"
+if(userName){
+    console.log("got the use name")
+}else{
+    console.log("didn't get the user name")
+}
+        //output:: "got the use name"
+
+//if useName is empty '""' then it will go with else see below::
+let userName2 = ""
+if(userName2){
+    console.log("got the use name")
+}else{
+    console.log("didn't get the user name")
+}
+    //ouput:: "didn't get the user name"
+
+//but if we will put an empty array then it will take as true
+//see below:::---
+let userName3 = []
+if(userName3){
+    console.log("got the use name")
+}else{
+    console.log("didn't get the user name")
+}
+    //output:: "got the use name"
+
+
+/*
+MATTER IS THAT THERE ARE SOME TRUTHY VALUE AND SOME FALSY VALUE
+FALSY VALUES::
+false, 0, -0, null, "", undefined, Nan, BigInt 0n
+
+TRUTHY VALUES::
+"0", "flase", " ", [], {}, function(){}
+*/
+
+//how to know array is empty
+let testArr = []
+if(testArr.length === 0){
+    console.log("Array is empty")
+}
+
+
+//how to check the object -- empty or not
+let hela = {}
+if(Object.keys(hela).length === 0){
+    console.log("object is empty")
+}
+
+
+//terniary operator
+let x = 200
+x > 400 ? console.log("greater"):console.log("lesser")
+//->means agar x is greater then log "greater" otherwise log "lesser"
+
+//loooopss revision::
+for(i=0; i<=10; i++){
+    console.log("jai hind")
+}
+
+let y = 0
+while(y<=10){
+    console.log("bharat mata ki jai")
+    y++
+}
+
+let k = 14
+do{
+    console.log("vande matram")
+    k++
+}while(k<=20)
+
+
+///----higher order array loopss ( arrays specific)
+//for of loop ⭐⭐
+let arrx = [1,2,3,4,5,67,8,9]
+for(let i of arrx){
+    console.log(i)
+}
+
+let greet = "hello maarcoooo"
+for(let k of greet){
+    console.log(k)
+}
+
+
+//maps
+let mp = new Map()
+mp.set('IN', "India")
+mp.set('US', "UnitedStates")
+mp.set('NZ', "Newzeeland")
+console.log(mp)
+//it stoes unike key mapped with vale
+mp.set('IN', "India")
+console.log(mp)//no impact last one replaced the similar previous one
+
+//-->using for of loop here
+for(let [key, values] of mp){
+    console.log(key, values)
+}
+    //output::IN India
+    //        US UnitedStates
+  //          NZ Newzeeland
+
+// object me [keys, value] kam nhi kregaa
+//we can use for in loop for iterating objects
+//example::
+let raj = {
+    fullName:"Aanditya Raj Chatari",
+    crime:"Chappal Chori",
+    punishment:"Ducked Sick",
+    address:"Ahiyapur"
+}
+for(let key in raj){
+    console.log(`${key} :: ${raj[key]}`)
+}
+
+// /clear difference between for in and for of loop
+//example
+let herox = {
+    id: 456800,
+    course: "MCA",
+    fee:89999
+}
+
+for(let k in herox){
+    console.log(k) //it gives keys -- id, course, fee
+}
+//-->for in loop iterates over keys of object
+//for of iterates over iteratable vlaues 
+//for in does not work with objects diectly
+//we use .keys() in for of in objects
+for(let t of Object.keys(herox)){
+    console.log(t)
+}
+
+///--->smooth work of 'for of' and 'for in' loop
+let a = [1,2,3,4,5]
+for (let h of a){
+    console.log(h)
+}
+
+for (let h in a){
+    console.log(h)//0   1   2   3   
+}//clearly dekh skte hai yaha keys access hueee hai
+
+///FOR EACH LOOP
+let p = ["ram", "aam", "khata", "hai", "kya"]
+p.forEach(
+    function(element){
+        console.log(`${element}0011`)
+    }
+)
+
+//arrow ke sath kaisaa dikhega
+p.forEach(
+    (element)=>{
+        console.log(element)
+    }
+)
+
+//ek or bat here 'element' directly value ko
+//indicate kr rha hai na ki keys 
+//too bat ye hai ki p[element] is undefined 💀
+
+//----kuch toofaani karte hai----
+const products = [
+  { id: 1, productName: "iPhone 15", category: "Electronics", price: 799 },
+  { id: 2, productName: "Nike Air Max", category: "Footwear", price: 120 },
+  { id: 3, productName: "Samsung TV", category: "Electronics", price: 650 },
+  { id: 4, productName: "Levi's Jeans", category: "Clothing", price: 65 },
+  { id: 5, productName: "Dell XPS 13", category: "Computers", price: 999 },
+  { id: 6, productName: "KitchenAid Mixer", category: "Home Appliances", price: 299 },
+  { id: 7, productName: "Sony Headphones", category: "Audio", price: 150 },
+  { id: 8, productName: "Cuisinart Coffee Maker", category: "Home Appliances", price: 89 },
+  { id: 9, productName: "GoPro HERO", category: "Electronics", price: 399 },
+  { id: 10, productName: "Kindle Paperwhite", category: "Books & Tech", price: 139 },
+  { id: 11, productName: "Apple Watch Series 8", category: "Wearables", price: 399 },
+  { id: 12, productName: "Adidas Ultraboost", category: "Footwear", price: 180 },
+  { id: 13, productName: "Instant Pot Duo", category: "Home Appliances", price: 99 },
+  { id: 14, productName: "Canon EOS Rebel", category: "Cameras", price: 599 },
+  { id: 15, productName: "JBL Bluetooth Speaker", category: "Audio", price: 89 },
+  { id: 16, productName: "Xbox Series X", category: "Gaming", price: 499 },
+  { id: 17, productName: "Fjällräven Backpack", category: "Accessories", price: 75 },
+  { id: 18, productName: "Ray-Ban Sunglasses", category: "Accessories", price: 195 },
+  { id: 19, productName: "Google Nest Thermostat", category: "Smart Home", price: 129 },
+  { id: 20, productName: "Apple AirPods Pro", category: "Audio", price: 249 }
+];
+
+
+products.forEach(function(element){
+    console.log(element.price) //accessed all prices at a time
+})
+
+products.forEach(
+    function(element){
+        console.log(`${element.productName} :: ${element.category}`)
+    }
+)
+
+products.forEach((iteam)=>{console.log(iteam.id)})
+
+

@@ -1306,3 +1306,140 @@ products.forEach(
 products.forEach((iteam)=>{console.log(iteam.id)})
 
 
+
+//-----------------filter-------------------
+
+let testAr = [100,200,500,400,300,600]
+let storage = testAr.filter((item)=>item>300)
+console.log(storage)
+//but when we open scope then
+let storage2 = testAr.filter(function(element){
+    return element < 500
+})
+console.log(storage2)
+
+///real world use of filter
+let bookList = [
+  { "title": "Whispers of Dawn", "genre": "Fantasy", "year": 2003 },
+  { "title": "Echoes in the Dark", "genre": "Horror", "year": 1998 },
+  { "title": "Shattered Paths", "genre": "Science Fiction", "year": 2011 },
+  { "title": "Crimson Horizon", "genre": "Romance", "year": 2017 },
+  { "title": "The Last Voyager", "genre": "Adventure", "year": 2005 },
+  { "title": "Silent Storms", "genre": "Mystery", "year": 2020 },
+  { "title": "Broken Crown", "genre": "Historical Fiction", "year": 2012 },
+  { "title": "Dreamchaser", "genre": "Fantasy", "year": 2007 },
+  { "title": "Iron Skies", "genre": "Science Fiction", "year": 2016 },
+  { "title": "Velvet Sands", "genre": "Romance", "year": 1999 },
+  { "title": "Ash and Ember", "genre": "Fantasy", "year": 2021 },
+  { "title": "Stolen Reflections", "genre": "Thriller", "year": 2013 },
+  { "title": "Cold Mirage", "genre": "Mystery", "year": 2001 },
+  { "title": "Firebound", "genre": "Fantasy", "year": 2018 },
+  { "title": "Steelheart Legacy", "genre": "Science Fiction", "year": 2009 },
+  { "title": "Painted Shadows", "genre": "Drama", "year": 2006 },
+  { "title": "Twilight Oath", "genre": "Fantasy", "year": 2010 },
+  { "title": "Frozen Harbor", "genre": "Mystery", "year": 2022 },
+  { "title": "Edge of Silence", "genre": "Thriller", "year": 2015 },
+  { "title": "Golden Horizon", "genre": "Adventure", "year": 1995 },
+  { "title": "Scarlet Veil", "genre": "Horror", "year": 2019 },
+  { "title": "Letters in Time", "genre": "Historical Fiction", "year": 2004 },
+  { "title": "Echo Valley", "genre": "Romance", "year": 2023 },
+  { "title": "Darkened Truth", "genre": "Thriller", "year": 2017 },
+  { "title": "Winds of Destiny", "genre": "Fantasy", "year": 2002 },
+  { "title": "Fragments of Reality", "genre": "Science Fiction", "year": 2008 },
+  { "title": "Moonlit Voyage", "genre": "Adventure", "year": 1997 },
+  { "title": "Candlelight Secrets", "genre": "Romance", "year": 2014 },
+  { "title": "Bitter Ashes", "genre": "Drama", "year": 2011 },
+  { "title": "Eternal Crossroad", "genre": "Fantasy", "year": 2000 },
+  { "title": "Fractured Horizon", "genre": "Science Fiction", "year": 2024 },
+  { "title": "Depths of Silence", "genre": "Mystery", "year": 1996 },
+  { "title": "Blood Tides", "genre": "Horror", "year": 2023 },
+  { "title": "Wandering Echoes", "genre": "Adventure", "year": 2019 },
+  { "title": "Divided Empire", "genre": "Historical Fiction", "year": 2006 },
+  { "title": "Fading Light", "genre": "Thriller", "year": 2003 },
+  { "title": "Secret Sparks", "genre": "Romance", "year": 2012 },
+  { "title": "Lost Dominion", "genre": "Fantasy", "year": 1999 },
+  { "title": "Shadow Protocol", "genre": "Science Fiction", "year": 2018 },
+  { "title": "Midnight Harbor", "genre": "Mystery", "year": 2016 },
+  { "title": "Cursed Haven", "genre": "Horror", "year": 2007 },
+  { "title": "Silent Comet", "genre": "Science Fiction", "year": 2005 },
+  { "title": "Petals of War", "genre": "Historical Fiction", "year": 1998 },
+  { "title": "Rivers of Fire", "genre": "Fantasy", "year": 2022 },
+  { "title": "Whispered Lies", "genre": "Thriller", "year": 2009 },
+  { "title": "Frosted Hearts", "genre": "Romance", "year": 2002 },
+  { "title": "Crimson Relic", "genre": "Adventure", "year": 2020 },
+  { "title": "Vanishing Points", "genre": "Mystery", "year": 2015 },
+  { "title": "Eternal Silence", "genre": "Drama", "year": 2001 }
+]
+
+
+let bucket = bookList.filter((bk)=>bk.year == 2016)
+console.log(bucket)
+//output::            
+/*
+]
+{ title: 'Iron Skies', genre: 'Science Fiction', year: 2016 },
+{ title: 'Midnight Harbor', genre: 'Mystery', year: 2016 }
+]
+*/
+//more examples
+let bucket_02 = bookList.filter(function(bk){
+    return bk.genre === "Romance"
+})
+console.log(bucket_02)
+
+let jasoosi = bookList.filter(function(element){
+    return element.genre === "Thriller" && element.year >= 2000
+})
+console.log(jasoosi)
+
+
+
+
+//--------chaining----------------
+let num = [1,2,3,4,5,6,7,8,9,10]
+let lota = num.map((element)=>element*10)
+console.log(lota)
+// ab dekhh chaining
+let lota2 = num.map((element)=>element*10).map((element)=>element*2)
+console.log(lota2)
+//first .map ko effenct to capture krte hue second .map me gya ye
+
+
+
+//-------------------redcuce-------------------
+let test = [1,2,3]
+let result = test.reduce(function(accumulator, currentValue){
+    console.log(accumulator)
+    console.log(currentValue)
+    return accumulator+currentValue
+},100)
+console.log(result)
+
+//mmore short form to write
+let parinam = test.reduce((acc, cVal)=>acc+cVal, 1000)
+console.log(parinam)
+            ///scope '{}' khola to 'return' dena jrooori hi hai
+
+///--------practical use of reduce------------
+let shopping = [
+  { "itemName": "Wireless Mouse", "price": 799 },
+  { "itemName": "Bluetooth Speaker", "price": 1499 },
+  { "itemName": "Coffee Mug", "price": 249 },
+  { "itemName": "Laptop Stand", "price": 1199 },
+  { "itemName": "Smartwatch", "price": 2999 },
+  { "itemName": "Gaming Keyboard", "price": 1899 },
+  { "itemName": "Water Bottle", "price": 349 },
+  { "itemName": "Phone Charger", "price": 499 },
+  { "itemName": "Backpack", "price": 1599 },
+  { "itemName": "Headphones", "price": 2499 }
+]
+// ⭐⭐⭐
+//find total sum to pay::💰💰
+let total = shopping.reduce((acc, crr)=>acc+crr.price,0)
+console.log(total)
+///-->current object ko traverse krta hai if we apply
+//.price then it will touch only prices of all objects
+
+------------------------------------------XX-------------------------🐻‍❄️PART ONE FINISHED 18 Aug2025🐻‍❄️----------------------------XX----------------------------------------------
+
+
